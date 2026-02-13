@@ -148,5 +148,22 @@ doorArea.addEventListener("drop", (e) => {
 // ==========================================
 // 6. PANEL BUTTONS
 // ==========================================
+// ==========================================
+// 7. PANEL CLOSE LOGIC
+// ==========================================
+const panelCloseBtn = document.getElementById("panelCloseBtn");
+
+if (panelCloseBtn) {
+    panelCloseBtn.addEventListener("click", () => {
+        // Hide the Level Complete Panel
+        const panel = document.getElementById("levelCompletePanel");
+        if (panel) {
+            panel.classList.add("hidden");
+        }
+
+        // Optional: If you want to un-blur the background when closing the panel
+        // document.getElementById("bgImage").classList.remove("blur-bg");
+    });
+}
 document.getElementById("homeBtn").addEventListener("click", () => location.reload());
 document.getElementById("nextBtn").addEventListener("click", () => location.reload());
